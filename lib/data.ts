@@ -7,7 +7,6 @@ export const deals: GroceryDeal[] = [
     price: 1.99,
     originalPrice: 3.99,
     store: "Maxima",
-    description: "Fresh organic avocados from Mexico, 2 for €4",
     imageUrl: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
     category: "Produce"
   },
@@ -17,7 +16,6 @@ export const deals: GroceryDeal[] = [
     price: 3.49,
     originalPrice: 5.99,
     store: "Lidl",
-    description: "32oz Greek yogurt, all natural",
     imageUrl: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400",
     category: "Dairy"
   },
@@ -27,7 +25,6 @@ export const deals: GroceryDeal[] = [
     price: 6.99,
     originalPrice: 9.99,
     store: "IKI",
-    description: "Free-range organic chicken breast, per pound",
     imageUrl: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
     category: "Meat"
   },
@@ -37,7 +34,6 @@ export const deals: GroceryDeal[] = [
     price: 4.49,
     originalPrice: 6.99,
     store: "Maxima",
-    description: "Freshly baked artisan sourdough",
     imageUrl: "https://images.unsplash.com/photo-1555951015-6da899b5c2cd?w=400",
     category: "Bakery"
   },
@@ -47,7 +43,6 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.99,
     store: "IKI",
-    description: "Fresh organic baby spinach, 16oz",
     imageUrl: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400",
     category: "Produce"
   },
@@ -57,7 +52,6 @@ export const deals: GroceryDeal[] = [
     price: 12.99,
     originalPrice: 18.99,
     store: "Maxima",
-    description: "Fresh wild-caught Alaskan salmon",
     imageUrl: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400",
     category: "Seafood"
   },
@@ -67,7 +61,6 @@ export const deals: GroceryDeal[] = [
     price: 4.99,
     originalPrice: 7.99,
     store: "Lidl",
-    description: "Free-range organic eggs, dozen",
     imageUrl: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400",
     category: "Dairy"
   },
@@ -77,7 +70,6 @@ export const deals: GroceryDeal[] = [
     price: 5.99,
     originalPrice: 8.99,
     store: "Maxima",
-    description: "Organic white quinoa, 1lb",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
     category: "Grains"
   },
@@ -87,7 +79,6 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.49,
     store: "Lidl",
-    description: "Unsweetened organic almond milk",
     imageUrl: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400",
     category: "Dairy"
   },
@@ -97,7 +88,6 @@ export const deals: GroceryDeal[] = [
     price: 1.49,
     originalPrice: 2.99,
     store: "IKI",
-    description: "Organic sweet potatoes, per pound",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
     category: "Produce"
   },
@@ -107,7 +97,6 @@ export const deals: GroceryDeal[] = [
     price: 8.99,
     originalPrice: 13.99,
     store: "Maxima",
-    description: "Organic fair-trade coffee, 12oz",
     imageUrl: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400",
     category: "Beverages"
   },
@@ -117,7 +106,6 @@ export const deals: GroceryDeal[] = [
     price: 3.99,
     originalPrice: 6.99,
     store: "IKI",
-    description: "Organic mixed berries, 12oz",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
     category: "Produce"
   },
@@ -127,7 +115,6 @@ export const deals: GroceryDeal[] = [
     price: 2.49,
     originalPrice: 3.99,
     store: "Lidl",
-    description: "Organic whole grain spaghetti",
     imageUrl: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=400",
     category: "Grains"
   },
@@ -137,7 +124,6 @@ export const deals: GroceryDeal[] = [
     price: 7.99,
     originalPrice: 11.99,
     store: "Maxima",
-    description: "Local raw honey, 16oz",
     imageUrl: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400",
     category: "Pantry"
   },
@@ -147,7 +133,6 @@ export const deals: GroceryDeal[] = [
     price: 4.99,
     originalPrice: 7.99,
     store: "Lidl",
-    description: "Italian buffalo mozzarella",
     imageUrl: "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=400",
     category: "Dairy"
   },
@@ -157,7 +142,6 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.99,
     store: "IKI",
-    description: "Organic cherry tomatoes, pint",
     imageUrl: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400",
     category: "Produce"
   }

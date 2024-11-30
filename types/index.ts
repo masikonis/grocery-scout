@@ -4,7 +4,6 @@ export interface GroceryDeal {
   price: number;
   originalPrice: number;
   store: string;
-  description: string;
   imageUrl: string;
   category: string;
 }

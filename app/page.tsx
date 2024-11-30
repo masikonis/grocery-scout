@@ -5,7 +5,7 @@ import { deals } from "@/lib/data";
 import { SelectedItems } from "@/components/shopping-list/selected-items";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { DealsSection } from "@/components/deals/deals-section";
-import { Leaf } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 export default function Home() {
   const [selectedDeals, setSelectedDeals] = useState<Set<string>>(new Set());
@@ -34,12 +34,11 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Leaf className="h-8 w-8 text-green-600" />
+            <ShoppingCart className="h-8 w-8 text-red-500" />
             <h1 className="text-4xl font-bold">Grocery Scout</h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your smart shopping companion. Find the best grocery deals and save money
-            on your favorite products, all in one place.
+            Smart grocery deals and shopping list.
           </p>
         </header>
 

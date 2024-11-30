@@ -36,7 +36,6 @@ export function DealCard({ deal, isSelected, onSelect }: DealCardProps) {
           <span className="text-sm">{deal.store}</span>
         </div>
         <h3 className="font-semibold text-lg mb-1">{deal.name}</h3>
-        <p className="text-sm text-muted-foreground mb-2">{deal.description}</p>
         <div className="flex items-baseline gap-2">
           <span className="text-xl font-bold">€{deal.price}</span>
           <span className="text-sm text-muted-foreground line-through">
