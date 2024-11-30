@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { Store } from "lucide-react";
+import { StoreIcon } from "@/components/ui/store-icon"
 
 interface DealCardProps {
   deal: GroceryDeal;
@@ -32,7 +32,7 @@ export function DealCard({ deal, isSelected, onSelect }: DealCardProps) {
       </div>
       <CardContent className="p-4">
         <div className="flex items-center gap-2 text-muted-foreground mb-2">
-          <Store className="w-4 h-4" />
+          <StoreIcon storeName={deal.store} className="w-4 h-4 object-contain" />
           <span className="text-sm">{deal.store}</span>
         </div>
         <h3 className="font-semibold text-lg mb-1">{deal.name}</h3>

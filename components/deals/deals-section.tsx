@@ -6,6 +6,7 @@ import { DealsGrid } from './deals-grid';
 import { LoadingGrid } from './loading-grid';
 import { useInfiniteDeals } from '@/lib/hooks/use-infinite-deals';
 import { Loader2 } from 'lucide-react';
+import { StoreIcon } from "@/components/ui/store-icon"
 
 interface DealsSectionProps {
   deals: GroceryDeal[];
