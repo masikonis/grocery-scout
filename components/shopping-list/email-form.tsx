@@ -21,7 +21,7 @@ interface EmailFormProps {
 }
 
 export function EmailForm({ onClose, isOpen, totalSavings, itemCount }: EmailFormProps) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("nerijus@masikonis.lt");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
