@@ -19,8 +19,6 @@ export function sortDeals(deals: GroceryDeal[], sortBy: string): GroceryDeal[] {
         return bSavings - aSavings;
       case "price":
         return a.price - b.price;
-      case "expiring":
-        return new Date(a.expiresAt).getTime() - new Date(b.expiresAt).getTime();
       default:
         return 0;
     }
