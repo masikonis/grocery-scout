@@ -23,6 +23,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { EmailForm } from "./email-form";
+import { StoreIcon } from '../ui/store-icon'
 
 interface SelectedItemsProps {
   selectedDeals: GroceryDeal[];
@@ -94,7 +95,7 @@ export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProp
                         <div>
                           <h4 className="font-medium">{deal.name}</h4>
                           <div className="flex items-center text-sm text-muted-foreground">
-                            <Store className="h-3 w-3 mr-1" />
+                            <StoreIcon storeName={deal.store} className="h-3 w-3 mr-1" />
                             {deal.store}
                           </div>
                         </div>
