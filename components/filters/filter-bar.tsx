@@ -31,6 +31,11 @@ export function FilterBar({
   onCategoryChange,
   onSortChange,
 }: FilterBarProps) {
+  const sortOptions = [
+    { value: "savings", label: "Highest Savings" },
+    { value: "price", label: "Lowest Price" }
+  ];
+
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-8">
       <Select 
@@ -77,7 +82,6 @@ export function FilterBar({
         <SelectContent>
           <SelectItem value="savings">Highest Savings</SelectItem>
           <SelectItem value="price">Lowest Price</SelectItem>
-          <SelectItem value="expiring">Expiring Soon</SelectItem>
         </SelectContent>
       </Select>
     </div>
