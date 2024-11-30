@@ -9,8 +9,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Fresh organic avocados from Mexico, 2 for €4",
     imageUrl: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
-    category: "Produce",
-    expiresAt: "2024-04-10",
+    category: "Produce"
   },
   {
     id: "2",
@@ -20,8 +19,7 @@ export const deals: GroceryDeal[] = [
     store: "Lidl",
     description: "32oz Greek yogurt, all natural",
     imageUrl: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400",
-    category: "Dairy",
-    expiresAt: "2024-04-09",
+    category: "Dairy"
   },
   {
     id: "3",
@@ -31,8 +29,7 @@ export const deals: GroceryDeal[] = [
     store: "IKI",
     description: "Free-range organic chicken breast, per pound",
     imageUrl: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
-    category: "Meat",
-    expiresAt: "2024-04-08",
+    category: "Meat"
   },
   {
     id: "4",
@@ -42,8 +39,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Freshly baked artisan sourdough",
     imageUrl: "https://images.unsplash.com/photo-1555951015-6da899b5c2cd?w=400",
-    category: "Bakery",
-    expiresAt: "2024-04-07",
+    category: "Bakery"
   },
   {
     id: "5",
@@ -53,8 +49,7 @@ export const deals: GroceryDeal[] = [
     store: "IKI",
     description: "Fresh organic baby spinach, 16oz",
     imageUrl: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400",
-    category: "Produce",
-    expiresAt: "2024-04-12",
+    category: "Produce"
   },
   {
     id: "6",
@@ -64,8 +59,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Fresh wild-caught Alaskan salmon",
     imageUrl: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400",
-    category: "Seafood",
-    expiresAt: "2024-04-08",
+    category: "Seafood"
   },
   {
     id: "7",
@@ -75,8 +69,7 @@ export const deals: GroceryDeal[] = [
     store: "Lidl",
     description: "Free-range organic eggs, dozen",
     imageUrl: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400",
-    category: "Dairy",
-    expiresAt: "2024-04-15",
+    category: "Dairy"
   },
   {
     id: "8",
@@ -86,8 +79,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Organic white quinoa, 1lb",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Grains",
-    expiresAt: "2024-04-20",
+    category: "Grains"
   },
   {
     id: "9",
@@ -97,8 +89,7 @@ export const deals: GroceryDeal[] = [
     store: "Lidl",
     description: "Unsweetened organic almond milk",
     imageUrl: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400",
-    category: "Dairy",
-    expiresAt: "2024-04-18",
+    category: "Dairy"
   },
   {
     id: "10",
@@ -108,8 +99,7 @@ export const deals: GroceryDeal[] = [
     store: "IKI",
     description: "Organic sweet potatoes, per pound",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Produce",
-    expiresAt: "2024-04-14",
+    category: "Produce"
   },
   {
     id: "11",
@@ -119,8 +109,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Organic fair-trade coffee, 12oz",
     imageUrl: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400",
-    category: "Beverages",
-    expiresAt: "2024-04-25",
+    category: "Beverages"
   },
   {
     id: "12",
@@ -130,8 +119,7 @@ export const deals: GroceryDeal[] = [
     store: "IKI",
     description: "Organic mixed berries, 12oz",
     imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Produce",
-    expiresAt: "2024-04-11",
+    category: "Produce"
   },
   {
     id: "13",
@@ -141,8 +129,7 @@ export const deals: GroceryDeal[] = [
     store: "Lidl",
     description: "Organic whole grain spaghetti",
     imageUrl: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=400",
-    category: "Grains",
-    expiresAt: "2024-04-30",
+    category: "Grains"
   },
   {
     id: "14",
@@ -152,8 +139,7 @@ export const deals: GroceryDeal[] = [
     store: "Maxima",
     description: "Local raw honey, 16oz",
     imageUrl: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400",
-    category: "Pantry",
-    expiresAt: "2024-05-15",
+    category: "Pantry"
   },
   {
     id: "15",
@@ -163,8 +149,7 @@ export const deals: GroceryDeal[] = [
     store: "Lidl",
     description: "Italian buffalo mozzarella",
     imageUrl: "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=400",
-    category: "Dairy",
-    expiresAt: "2024-04-12",
+    category: "Dairy"
   },
   {
     id: "16",
@@ -174,7 +159,6 @@ export const deals: GroceryDeal[] = [
     store: "IKI",
     description: "Organic cherry tomatoes, pint",
     imageUrl: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400",
-    category: "Produce",
-    expiresAt: "2024-04-13",
+    category: "Produce"
   }
 ];

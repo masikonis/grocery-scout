@@ -7,7 +7,6 @@ export interface GroceryDeal {
   description: string;
   imageUrl: string;
   category: string;
-  expiresAt: string;
 }
 
 export interface SelectedItem {
