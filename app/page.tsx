@@ -34,8 +34,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <ShoppingCart className="h-8 w-8 text-red-500" />
-            <h1 className="text-4xl font-bold">Grocery Scout</h1>
+            <img src="/images/logo.png" alt="Grocery Scout Logo" className="h-16 w-auto" />
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Smart grocery deals and shopping list.

@@ -8,7 +8,7 @@ interface StoreIconProps {
 export function StoreIcon({ storeName, className }: StoreIconProps) {
   return (
     <Image
-      src={`/stores/${storeName}.png`}
+      src={`/images/stores/${storeName}.png`}
       alt={`${storeName} logo`}
       width={16}
       height={16}
