@@ -42,7 +42,7 @@ export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProp
       <Sheet>
         <SheetTrigger asChild>
           <Button 
-            className="fixed bottom-4 right-4 md:bottom-8 md:right-8 shadow-lg"
+            className="fixed bottom-4 right-4 md:bottom-8 md:right-8 shadow-lg bg-[#ff844e] hover:bg-[#e67645] text-white"
             size="lg"
           >
             <ShoppingCart className="mr-2 h-5 w-5" />
@@ -50,7 +50,7 @@ export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProp
             {selectedDeals.length > 0 && (
               <Badge 
                 variant="secondary" 
-                className="ml-2 bg-green-100 text-green-800"
+                className="ml-2 bg-white text-[#ff844e] font-medium"
               >
                 Save €{totalSavings.toFixed(2)}
               </Badge>
