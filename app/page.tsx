@@ -37,7 +37,7 @@ export default function Home() {
             <img src="/images/logo.png" alt="Grocery Scout Logo" className="h-16 w-auto" />
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Smart grocery deals and shopping list.
+            Save Smart. Shop Healthy. Live Well.
           </p>
         </header>
 
