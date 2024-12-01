@@ -6,6 +6,7 @@ import { SelectedItems } from "@/components/shopping-list/selected-items";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { DealsSection } from "@/components/deals/deals-section";
 import { ShoppingCart } from "lucide-react";
+import { WhyChooseSection} from "@/components/features/why-choose"
 
 export default function Home() {
   const [selectedDeals, setSelectedDeals] = useState<Set<string>>(new Set());
@@ -30,7 +31,7 @@ export default function Home() {
   const selectedDealItems = deals.filter((deal) => selectedDeals.has(deal.id));
 
   return (
-    <main className="min-h-screen bg-gray-50 pb-8">
+    <main className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -65,6 +66,8 @@ export default function Home() {
           selectedDeals={selectedDealItems}
           onRemoveItem={handleDealSelect}
         />
+
+        <WhyChooseSection />
       </div>
     </main>
   );
