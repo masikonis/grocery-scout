@@ -17,12 +17,17 @@ export function useInfiniteDeals(
   const filteredDeals = deals
     .filter((deal) => !selectedStore || deal.store === selectedStore)
     .sort((a, b) => {
-      if (sortBy === 'savings') {
+      if (sortBy === 'highest-savings') {
         const savingsA = a.originalPrice - a.price;
         const savingsB = b.originalPrice - b.price;
-        return savingsB - savingsA;
+        return savingsB - savingsA;  // Sort highest dollar savings first
       }
-      return a.price - b.price; // 'price' sorting
+      if (sortBy === 'biggest-discount') {
+        const discountA = ((a.originalPrice - a.price) / a.originalPrice) * 100;
+        const discountB = ((b.originalPrice - b.price) / b.originalPrice) * 100;
+        return discountB - discountA;  // Sort highest percentage discount first
+      }
+      return a.price - b.price; // Default 'price' sorting
     });
 
   // Reset pagination when filters change

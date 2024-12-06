@@ -14,7 +14,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [selectedDeals, setSelectedDeals] = useState<Set<string>>(new Set());
   const [selectedStore, setSelectedStore] = useState<string | null>(null);
-  const [sortBy, setSortBy] = useState("savings");
+  const [sortBy, setSortBy] = useState("biggest-discount");
 
   useEffect(() => {
     async function fetchDeals() {

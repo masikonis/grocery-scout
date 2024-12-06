@@ -13,7 +13,7 @@ import { Store, SortAsc } from "lucide-react";
 interface FilterBarProps {
   stores: string[];
   selectedStore: string | null;
-  sortBy: string;
+  sortBy?: string;
   onStoreChange: (store: string | null) => void;
   onSortChange: (sort: string) => void;
 }
@@ -21,7 +21,7 @@ interface FilterBarProps {
 export function FilterBar({
   stores,
   selectedStore,
-  sortBy,
+  sortBy = "biggest-discount",
   onStoreChange,
   onSortChange,
 }: FilterBarProps) {
@@ -45,13 +45,18 @@ export function FilterBar({
         </SelectContent>
       </Select>
 
-      <Select value={sortBy} onValueChange={onSortChange}>
+      <Select 
+        defaultValue="biggest-discount" 
+        value={sortBy} 
+        onValueChange={onSortChange}
+      >
         <SelectTrigger className="w-full md:w-[200px]">
           <SortAsc className="mr-2 h-4 w-4" />
           <SelectValue placeholder="Sort By" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="savings">Highest Savings</SelectItem>
+          <SelectItem value="biggest-discount">Biggest Discount</SelectItem>
+          <SelectItem value="highest-savings">Highest Savings</SelectItem>
           <SelectItem value="price">Lowest Price</SelectItem>
         </SelectContent>
       </Select>
