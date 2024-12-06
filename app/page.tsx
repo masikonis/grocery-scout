@@ -6,8 +6,7 @@ import { deals as dummyDeals } from "@/lib/data";
 import { SelectedItems } from "@/components/shopping-list/selected-items";
 import { FilterBar } from "@/components/filters/filter-bar";
 import { DealsSection } from "@/components/deals/deals-section";
-import { ShoppingCart } from "lucide-react";
-import { WhyChooseSection} from "@/components/features/why-choose"
+import { WhyChooseSection } from "@/components/features/why-choose";
 
 export default function Home() {
   const [deals, setDeals] = useState<GroceryDeal[]>(dummyDeals);
@@ -15,7 +14,6 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [selectedDeals, setSelectedDeals] = useState<Set<string>>(new Set());
   const [selectedStore, setSelectedStore] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState("savings");
 
   useEffect(() => {
@@ -65,7 +63,6 @@ export default function Home() {
   };
 
   const stores = Array.from(new Set(deals.map((deal) => deal.store)));
-  const categories = Array.from(new Set(deals.map((deal) => deal.category)));
   const selectedDealItems = deals.filter((deal) => selectedDeals.has(deal.id));
 
   if (isLoading) {
@@ -98,12 +95,9 @@ export default function Home() {
 
         <FilterBar
           stores={stores}
-          categories={categories}
           selectedStore={selectedStore}
-          selectedCategory={selectedCategory}
           sortBy={sortBy}
           onStoreChange={setSelectedStore}
-          onCategoryChange={setSelectedCategory}
           onSortChange={setSortBy}
         />
 
@@ -111,7 +105,6 @@ export default function Home() {
           deals={deals}
           selectedDeals={selectedDeals}
           selectedStore={selectedStore}
-          selectedCategory={selectedCategory}
           sortBy={sortBy}
           onDealSelect={handleDealSelect}
         />
