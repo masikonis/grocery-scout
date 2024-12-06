@@ -160,6 +160,7 @@ export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProp
         onClose={() => setIsEmailFormOpen(false)}
         totalSavings={totalSavings}
         itemCount={selectedDeals.length}
+        selectedDeals={selectedDeals}
       />
     </>
   );

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Loader2 } from "lucide-react";
+import { Mail, Loader2, AlertCircle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -18,33 +18,59 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import type { GroceryDeal } from "@/types";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface EmailFormProps {
   onClose: () => void;
   isOpen: boolean;
   totalSavings: number;
   itemCount: number;
+  selectedDeals: GroceryDeal[];
 }
 
-export function EmailForm({ onClose, isOpen, totalSavings, itemCount }: EmailFormProps) {
+export function EmailForm({ onClose, isOpen, totalSavings, itemCount, selectedDeals }: EmailFormProps) {
   const [email, setEmail] = useState("nerijus@masikonis.lt");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(null);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsLoading(false);
-    setIsSuccess(true);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          deals: selectedDeals,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
+
+      setIsSuccess(true);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setError(error instanceof Error ? error.message : 'Failed to send email');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleClose = () => {
     setEmail("");
     setIsSuccess(false);
+    setError(null);
     onClose();
   };
 
@@ -66,6 +92,14 @@ export function EmailForm({ onClose, isOpen, totalSavings, itemCount }: EmailFor
                 Get your shopping list with {itemCount} items and €{totalSavings.toFixed(2)} in savings sent to your email.
               </DialogDescription>
             </DialogHeader>
+            
+            {error && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col gap-2">
                 <Select
