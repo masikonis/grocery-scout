@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Mail, Loader2 } from "lucide-react";
 import {
   Dialog,
@@ -12,6 +11,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { EmailSuccess } from "./email-success";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface EmailFormProps {
   onClose: () => void;
@@ -21,7 +27,7 @@ interface EmailFormProps {
 }
 
 export function EmailForm({ onClose, isOpen, totalSavings, itemCount }: EmailFormProps) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("nerijus@masikonis.lt");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -62,13 +68,23 @@ export function EmailForm({ onClose, isOpen, totalSavings, itemCount }: EmailFor
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="flex flex-col gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
+                <Select
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
+                  onValueChange={setEmail}
+                  defaultValue="nerijus@masikonis.lt"
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select email" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="nerijus@masikonis.lt">
+                      nerijus@masikonis.lt
+                    </SelectItem>
+                    <SelectItem value="odeta.vaiciunaite@gmail.com">
+                      odeta.vaiciunaite@gmail.com
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               <div className="flex justify-end gap-3">
                 <Button type="button" variant="outline" onClick={handleClose}>
