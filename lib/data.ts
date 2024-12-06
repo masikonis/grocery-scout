@@ -7,8 +7,7 @@ export const deals: GroceryDeal[] = [
     price: 1.99,
     originalPrice: 3.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
-    category: "Produce"
+    imageUrl: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400"
   },
   {
     id: "2",
@@ -16,8 +15,7 @@ export const deals: GroceryDeal[] = [
     price: 3.49,
     originalPrice: 5.99,
     store: "Lidl",
-    imageUrl: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400",
-    category: "Dairy"
+    imageUrl: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400"
   },
   {
     id: "3",
@@ -25,8 +23,7 @@ export const deals: GroceryDeal[] = [
     price: 6.99,
     originalPrice: 9.99,
     store: "IKI",
-    imageUrl: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
-    category: "Meat"
+    imageUrl: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400"
   },
   {
     id: "4",
@@ -34,8 +31,7 @@ export const deals: GroceryDeal[] = [
     price: 4.49,
     originalPrice: 6.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1555951015-6da899b5c2cd?w=400",
-    category: "Bakery"
+    imageUrl: "https://images.unsplash.com/photo-1555951015-6da899b5c2cd?w=400"
   },
   {
     id: "5",
@@ -43,8 +39,7 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.99,
     store: "IKI",
-    imageUrl: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400",
-    category: "Produce"
+    imageUrl: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400"
   },
   {
     id: "6",
@@ -52,8 +47,7 @@ export const deals: GroceryDeal[] = [
     price: 12.99,
     originalPrice: 18.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400",
-    category: "Seafood"
+    imageUrl: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=400"
   },
   {
     id: "7",
@@ -61,8 +55,7 @@ export const deals: GroceryDeal[] = [
     price: 4.99,
     originalPrice: 7.99,
     store: "Lidl",
-    imageUrl: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400",
-    category: "Dairy"
+    imageUrl: "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400"
   },
   {
     id: "8",
@@ -70,8 +63,7 @@ export const deals: GroceryDeal[] = [
     price: 5.99,
     originalPrice: 8.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Grains"
+    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400"
   },
   {
     id: "9",
@@ -79,8 +71,7 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.49,
     store: "Lidl",
-    imageUrl: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400",
-    category: "Dairy"
+    imageUrl: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400"
   },
   {
     id: "10",
@@ -88,8 +79,7 @@ export const deals: GroceryDeal[] = [
     price: 1.49,
     originalPrice: 2.99,
     store: "IKI",
-    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Produce"
+    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400"
   },
   {
     id: "11",
@@ -97,8 +87,7 @@ export const deals: GroceryDeal[] = [
     price: 8.99,
     originalPrice: 13.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400",
-    category: "Beverages"
+    imageUrl: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400"
   },
   {
     id: "12",
@@ -106,8 +95,7 @@ export const deals: GroceryDeal[] = [
     price: 3.99,
     originalPrice: 6.99,
     store: "IKI",
-    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400",
-    category: "Produce"
+    imageUrl: "https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=400"
   },
   {
     id: "13",
@@ -115,8 +103,7 @@ export const deals: GroceryDeal[] = [
     price: 2.49,
     originalPrice: 3.99,
     store: "Lidl",
-    imageUrl: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=400",
-    category: "Grains"
+    imageUrl: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=400"
   },
   {
     id: "14",
@@ -124,8 +111,7 @@ export const deals: GroceryDeal[] = [
     price: 7.99,
     originalPrice: 11.99,
     store: "Maxima",
-    imageUrl: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400",
-    category: "Pantry"
+    imageUrl: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400"
   },
   {
     id: "15",
@@ -133,8 +119,7 @@ export const deals: GroceryDeal[] = [
     price: 4.99,
     originalPrice: 7.99,
     store: "Lidl",
-    imageUrl: "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=400",
-    category: "Dairy"
+    imageUrl: "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=400"
   },
   {
     id: "16",
@@ -142,7 +127,6 @@ export const deals: GroceryDeal[] = [
     price: 2.99,
     originalPrice: 4.99,
     store: "IKI",
-    imageUrl: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400",
-    category: "Produce"
+    imageUrl: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400"
   }
 ];

@@ -12,7 +12,6 @@ interface DealsSectionProps {
   deals: GroceryDeal[];
   selectedDeals: Set<string>;
   selectedStore: string | null;
-  selectedCategory: string | null;
   sortBy: string;
   onDealSelect: (dealId: string) => void;
 }
@@ -21,14 +20,12 @@ export function DealsSection({
   deals,
   selectedDeals,
   selectedStore,
-  selectedCategory,
   sortBy,
   onDealSelect,
 }: DealsSectionProps) {
   const { displayedDeals, hasMore, loadMore, isInitialLoading } = useInfiniteDeals(
     deals,
     selectedStore,
-    selectedCategory,
     sortBy
   );
 

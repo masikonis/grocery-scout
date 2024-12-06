@@ -2,62 +2,43 @@
 
 import { useState, useEffect } from 'react';
 import { GroceryDeal } from '@/types';
-import { filterDealsByStore, filterDealsByCategory, sortDeals } from '@/lib/utils/filters';
-
-const ITEMS_PER_PAGE = 4;
-const INITIAL_LOAD_DELAY = 500; // Simulate network delay
 
 export function useInfiniteDeals(
   deals: GroceryDeal[],
   selectedStore: string | null,
-  selectedCategory: string | null,
-  sortBy: string
+  sortBy: string,
+  pageSize: number = 12
 ) {
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
   const [displayedDeals, setDisplayedDeals] = useState<GroceryDeal[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [isInitialLoading, setIsInitialLoading] = useState(true);
 
+  // Filter and sort deals
+  const filteredDeals = deals
+    .filter((deal) => !selectedStore || deal.store === selectedStore)
+    .sort((a, b) => {
+      if (sortBy === 'savings') {
+        const savingsA = a.originalPrice - a.price;
+        const savingsB = b.originalPrice - b.price;
+        return savingsB - savingsA;
+      }
+      return a.price - b.price; // 'price' sorting
+    });
+
+  // Reset pagination when filters change
   useEffect(() => {
-    // Reset pagination when filters change
-    setPage(1);
-    setDisplayedDeals([]);
-    setHasMore(true);
-    setIsInitialLoading(true);
-
-    const timer = setTimeout(() => {
-      let filteredDeals = deals;
-      filteredDeals = filterDealsByStore(filteredDeals, selectedStore);
-      filteredDeals = filterDealsByCategory(filteredDeals, selectedCategory);
-      filteredDeals = sortDeals(filteredDeals, sortBy);
-
-      const initialDeals = filteredDeals.slice(0, ITEMS_PER_PAGE);
-      setDisplayedDeals(initialDeals);
-      setHasMore(initialDeals.length < filteredDeals.length);
-      setIsInitialLoading(false);
-    }, INITIAL_LOAD_DELAY);
-
-    return () => clearTimeout(timer);
-  }, [deals, selectedStore, selectedCategory, sortBy]);
-
-  useEffect(() => {
-    if (page === 1) return;
-
-    let filteredDeals = deals;
-    filteredDeals = filterDealsByStore(filteredDeals, selectedStore);
-    filteredDeals = filterDealsByCategory(filteredDeals, selectedCategory);
-    filteredDeals = sortDeals(filteredDeals, sortBy);
-
-    const totalItems = page * ITEMS_PER_PAGE;
-    const newDeals = filteredDeals.slice(0, totalItems);
-    
-    setDisplayedDeals(newDeals);
-    setHasMore(newDeals.length < filteredDeals.length);
-  }, [deals, selectedStore, selectedCategory, sortBy, page]);
+    setCurrentPage(1);
+    setDisplayedDeals(filteredDeals.slice(0, pageSize));
+    setIsInitialLoading(false);
+  }, [selectedStore, sortBy, deals, pageSize]);
 
   const loadMore = () => {
-    setPage((prev) => prev + 1);
+    const nextDeals = filteredDeals.slice(0, (currentPage + 1) * pageSize);
+    setDisplayedDeals(nextDeals);
+    setCurrentPage(prev => prev + 1);
   };
+
+  const hasMore = displayedDeals.length < filteredDeals.length;
 
   return {
     displayedDeals,

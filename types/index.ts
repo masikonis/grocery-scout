@@ -5,7 +5,6 @@ export interface GroceryDeal {
   originalPrice: number;
   store: string;
   imageUrl: string;
-  category: string;
 }
 
 export interface SelectedItem {
