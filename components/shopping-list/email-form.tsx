@@ -22,14 +22,15 @@ import type { GroceryDeal } from "@/types";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface EmailFormProps {
-  onClose: () => void;
   isOpen: boolean;
+  onClose: () => void;
+  onSuccess: () => void;
   totalSavings: number;
   itemCount: number;
   selectedDeals: GroceryDeal[];
 }
 
-export function EmailForm({ onClose, isOpen, totalSavings, itemCount, selectedDeals }: EmailFormProps) {
+export function EmailForm({ onClose, isOpen, totalSavings, itemCount, selectedDeals, onSuccess }: EmailFormProps) {
   const [email, setEmail] = useState("nerijus@masikonis.lt");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -59,6 +60,7 @@ export function EmailForm({ onClose, isOpen, totalSavings, itemCount, selectedDe
       }
 
       setIsSuccess(true);
+      onSuccess();
     } catch (error) {
       console.error('Error sending email:', error);
       setError(error instanceof Error ? error.message : 'Failed to send email');

@@ -12,7 +12,7 @@ export default function Home() {
   const [deals, setDeals] = useState<GroceryDeal[]>(dummyDeals);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedDeals, setSelectedDeals] = useState<Set<string>>(new Set());
+  const [selectedDeals, setSelectedDeals] = useState<GroceryDeal[]>([]);
   const [selectedStore, setSelectedStore] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState("biggest-discount");
 
@@ -52,18 +52,26 @@ export default function Home() {
 
   const handleDealSelect = (dealId: string) => {
     setSelectedDeals((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(dealId)) {
-        newSet.delete(dealId);
+      const exists = prev.some(deal => deal.id === dealId);
+      if (exists) {
+        // Remove the deal if it exists
+        return prev.filter(deal => deal.id !== dealId);
       } else {
-        newSet.add(dealId);
+        // Add the deal if it doesn't exist
+        const dealToAdd = deals.find(deal => deal.id === dealId);
+        if (dealToAdd) {
+          return [...prev, dealToAdd];
+        }
+        return prev;
       }
-      return newSet;
     });
   };
 
   const stores = Array.from(new Set(deals.map((deal) => deal.store)));
-  const selectedDealItems = deals.filter((deal) => selectedDeals.has(deal.id));
+
+  const handleClearItems = () => {
+    setSelectedDeals([]);
+  };
 
   if (isLoading) {
     return (
@@ -103,15 +111,16 @@ export default function Home() {
 
         <DealsSection
           deals={deals}
-          selectedDeals={selectedDeals}
+          selectedDeals={new Set(selectedDeals.map(deal => deal.id))}
           selectedStore={selectedStore}
           sortBy={sortBy}
           onDealSelect={handleDealSelect}
         />
 
         <SelectedItems
-          selectedDeals={selectedDealItems}
+          selectedDeals={selectedDeals}
           onRemoveItem={handleDealSelect}
+          onClearItems={handleClearItems}
         />
 
         <WhyChooseSection />

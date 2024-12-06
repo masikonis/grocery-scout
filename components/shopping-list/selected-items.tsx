@@ -28,23 +28,32 @@ import { StoreIcon } from '../ui/store-icon'
 interface SelectedItemsProps {
   selectedDeals: GroceryDeal[];
   onRemoveItem: (dealId: string) => void;
+  onClearItems: () => void;
 }
 
-export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProps) {
+export function SelectedItems({ selectedDeals, onRemoveItem, onClearItems }: SelectedItemsProps) {
   const [isEmailFormOpen, setIsEmailFormOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
   const total = selectedDeals.reduce((sum, deal) => sum + deal.price, 0);
   const totalSavings = selectedDeals.reduce(
     (sum, deal) => sum + (deal.originalPrice - deal.price),
     0
   );
 
+  const handleEmailSuccess = () => {
+    setIsEmailFormOpen(false);
+    setIsSheetOpen(false);
+    onClearItems();
+  };
+
   return (
     <>
-      <Sheet>
+      <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
         <SheetTrigger asChild>
           <Button 
             className="fixed bottom-4 right-4 md:bottom-8 md:right-8 shadow-lg bg-[#ff844e] hover:bg-[#e67645] text-white"
             size="lg"
+            onClick={() => setIsSheetOpen(true)}
           >
             <ShoppingCart className="mr-2 h-5 w-5" />
             <span>{selectedDeals.length} Items</span>
@@ -161,6 +170,7 @@ export function SelectedItems({ selectedDeals, onRemoveItem }: SelectedItemsProp
         totalSavings={totalSavings}
         itemCount={selectedDeals.length}
         selectedDeals={selectedDeals}
+        onSuccess={handleEmailSuccess}
       />
     </>
   );
