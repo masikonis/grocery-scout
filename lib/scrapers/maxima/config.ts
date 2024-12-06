@@ -1,4 +1,4 @@
-import { ScraperConfig } from "./types";
+import { ScraperConfig } from "../types";
 
 export const maximaConfig: ScraperConfig = {
   baseUrl: "https://www.maxima.lt/pasiulymai",

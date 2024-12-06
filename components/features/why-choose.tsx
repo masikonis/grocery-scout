@@ -4,7 +4,7 @@ import { FeatureCard } from './feature-card';
 const features = [
     {
       title: 'Quality Meets Value',
-      description: 'Find great deals on fresh, minimally processed foods and essentials.',
+      description: 'Find the best deals from your favorite grocery stores, all in one place.',
       Icon: ShoppingBasket
     },
     {

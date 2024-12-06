@@ -3,12 +3,18 @@ import { GroceryDeal } from "@/types";
 export interface ScraperConfig {
   baseUrl: string;
   selectors: {
-    container: string;      // Main deals container
-    productCard: string;    // Individual deal card
-    name: string;          // Product name
-    price: string;         // Current price
-    originalPrice: string; // Original price
-    image: string;         // Product image
+    container: string;
+    productCard: string;
+    name: string;
+    currentPrice: {
+      euro: string;
+      cents: string;
+    };
+    originalPrice: {
+      standard: string;
+      alternate: string;
+    };
+    image: string;
   };
 }
 
