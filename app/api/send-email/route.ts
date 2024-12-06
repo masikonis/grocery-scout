@@ -48,11 +48,13 @@ function formatShoppingList(deals: GroceryDeal[]): { text: string; html: string 
   }
 
   const total = deals.reduce((sum, deal) => sum + deal.price, 0)
-  const totalSavings = deals.reduce((sum, deal) => sum + (deal.originalPrice - deal.price), 0)
+  const originalTotal = deals.reduce((sum, deal) => sum + deal.originalPrice, 0)
+  const totalSavings = originalTotal - total
 
-  const totalsText = `Total: €${total.toFixed(2)}\nTotal Savings: €${totalSavings.toFixed(2)}`
+  const totalsText = `Original Total: €${originalTotal.toFixed(2)}\nFinal Total: €${total.toFixed(2)}\nTotal Savings: €${totalSavings.toFixed(2)}`
   const totalsHtml = `<strong>
-    Total: €${total.toFixed(2)}<br>
+    Original Total: <strike>€${originalTotal.toFixed(2)}</strike><br>
+    Final Total: €${total.toFixed(2)}<br>
     <span style="color: #dc2626">Total Savings: €${totalSavings.toFixed(2)}</span>
   </strong>`
 
