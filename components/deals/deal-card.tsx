@@ -35,7 +35,7 @@ export function DealCard({ deal, isSelected, onSelect }: DealCardProps) {
           <StoreIcon storeName={deal.store} className="w-4 h-4 object-contain" />
           <span className="text-sm">{deal.store}</span>
         </div>
-        <h3 className="font-semibold text-lg mb-1">{deal.name}</h3>
+        <h3 className="font-semibold text-lg mb-1 line-clamp-2 h-14">{deal.name}</h3>
         <div className="flex items-baseline gap-2">
           <span className="text-xl font-bold">€{deal.price}</span>
           <span className="text-sm text-muted-foreground line-through">

@@ -1,4 +1,4 @@
-import { ShoppingBasket, Clock, ListChecks } from 'lucide-react';
+import { ShoppingBasket, Clock, ListChecks, Route } from 'lucide-react';
 import { FeatureCard } from './feature-card';
 
 const features = [
@@ -16,6 +16,11 @@ const features = [
       title: 'Simplify Your Shopping',
       description: 'Create a custom shopping list and get it sent to your inbox in seconds.',
       Icon: ListChecks
+    },
+    {
+      title: 'Smart Shopping Path',
+      description: 'Get in, get what you need, get out - no more impulse purchases.',
+      Icon: Route
     }
 ] as const;  
 
@@ -29,7 +34,7 @@ export function WhyChooseSection() {
             <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
             {features.map((feature) => (
             <FeatureCard
                 key={feature.title}
