@@ -1,6 +1,6 @@
 # Grocery Scout
 
-Shopping tool that fetches deals from grocery stores into one easy-to-use platform. [Click here to visit](https://grocery-scout.vercel.app/).
+Shopping tool that fetches deals from grocery stores into one easy-to-use page. [Click here to visit](https://grocery-scout.vercel.app/).
 
 ## Rationale
 
