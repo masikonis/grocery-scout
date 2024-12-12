@@ -1,8 +1,6 @@
 # Grocery Scout
 
-Grocery Scout is a shopping tool that consolidates deals from multiple grocery stores into one easy-to-use platform. Users can discover the best offers, create shopping lists, and receive email copies for convenient in-store reference.
-
-[Visit the app](https://grocery-scout.vercel.app/)
+Grocery Scout is a shopping tool that consolidates deals from multiple grocery stores into one easy-to-use platform. Users can discover the best offers, create shopping lists, and receive email copies for convenient in-store reference. [Click here to visit.](https://grocery-scout.vercel.app/).
 
 ## Rationale
 
