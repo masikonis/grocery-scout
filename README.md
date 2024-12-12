@@ -11,3 +11,4 @@ I created Grocery Scout to address my frustration with checking multiple store w
 [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://grocery-scout.vercel.app/)
 [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Mailgun](https://img.shields.io/badge/Mailgun-F06B66?style=for-the-badge&logo=mailgun&logoColor=white)](https://www.mailgun.com/)
